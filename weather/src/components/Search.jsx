@@ -5,6 +5,8 @@ import sunny from '../sunny.jpg'
 import snowy from '../snowy.jpg'
 import { ArrowDown } from 'react-bootstrap-icons';
 import { ArrowUp } from 'react-bootstrap-icons';
+import { Wind } from 'react-bootstrap-icons';
+import { CloudsFill } from 'react-bootstrap-icons';
 
 const Search = () => {
     const [search, setSearch] = useState("");
@@ -56,7 +58,7 @@ const Search = () => {
                         <div className="row justify-content-center">
                             <div className="col-md-4">
                                 <Card className="bg-light text-dark text-center card">
-                                <Card.Img src={details.main.temp > 291 ?{sunny} : {snowy}} style={{height: "500px"}} alt="..." className="bg-image"/>
+                                <Card.Img src={details.main.temp > 291 ?sunny : snowy} alt="..." className="bg-image"/>
                                     <Card.ImgOverlay>
                                         <Card.Title><p className="city-name">{details.name}</p></Card.Title>
                                         <Card.Text className="temp">
@@ -64,8 +66,12 @@ const Search = () => {
                                         </Card.Text>
                                         <Card.Text className="type">{details.weather[0].main}</Card.Text>
                                         <Row className="max-min">
-                                            <Col md={6}><ArrowUp/>{Math.floor(details.main.temp_max - 273.15)}ºC</Col>
-                                            <Col md={6}><ArrowDown/>{Math.floor(details.main.temp_min - 273.15)}ºC</Col>
+                                            <Col md={6}><ArrowUp className="mx-2 icons"/>{Math.floor(details.main.temp_max - 273.15)}ºC</Col>
+                                            <Col md={6}><ArrowDown className="mx-2 icons"/>{Math.floor(details.main.temp_min - 273.15)}ºC</Col>
+                                        </Row>
+                                        <Row className="wind-climate text-light mt-2">
+                                            <Col md={6}><CloudsFill className="mx-3 icons"/>{details.weather[0].description}</Col>
+                                            <Col md={6}><Wind className="mx-3 icons"/>{details.wind.speed}m/s</Col>
                                         </Row>
                                     </Card.ImgOverlay>
                                 </Card>

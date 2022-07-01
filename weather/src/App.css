@@ -5,13 +5,13 @@
 }
 
 body {
-  background-image: url('https://images.unsplash.com/photo-1496450681664-3df85efbd29f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxjb2xsZWN0aW9uLXBhZ2V8NnwxOTMzMDE1fHxlbnwwfHx8fA%3D%3D&w=1000&q=80');
+  background-image: url('https://images.unsplash.com/photo-1496450681664-3df85efbd29f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTZ8fHdlYXRoZXJ8ZW58MHx8MHx8&w=1000&q=80');
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
+  object-fit: contain;
   min-height: 100vh;
   height: 100%;
-
 }
 
 .App {
@@ -55,12 +55,14 @@ border-radius: 10rem;
     background-color: inherit !important;
     border: none !important;
     border-radius: 20px !important;
-    
+    height: 70vh !important;
   }
 
   .bg-image {
     border-radius: 20px !important;
+    height: 100% !important;
   }
+
 .city-name {
   color: azure;
   font-size: 35px;
@@ -73,16 +75,16 @@ border-radius: 10rem;
   position: relative;
   display: inline-block;
   margin: 30px auto;
-  background-color: rgba(255, 255, 255, 0.2);
+  background-color: rgba(189, 186, 186, 0.2);
   border-radius: 16px;
 
   padding: 15px 25px;
 
-  color: #FFF;
+  color: rgb(227, 226, 226);
   font-size: 70px;
   font-weight: 800;
 
-  text-shadow: 3px 6px rgba(50, 50, 70, 0.5);
+  text-shadow: 3px 6px rgba(111, 111, 111, 0.5);
   text-align: center;
   box-shadow: 3px 6px rgba(0, 0, 0, 0.2);
 }
@@ -99,4 +101,12 @@ border-radius: 10rem;
   font-size: 20px;
   font-weight: 400;
   text-shadow: 3px 3px rgba(50, 50, 70, 0.5);
+}
+
+.wind-climate {
+  font-size: 20px;
+}
+
+.icons {
+  font-size: 30px;
 }
